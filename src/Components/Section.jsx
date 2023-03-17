@@ -5,7 +5,7 @@ const Section = () => {
     <div className='container'>
       <section className="container bg-black py-2" >
          <div>
-          <h2 className='text-center text-white my-3'>Recibe información en tu correo</h2>
+          <h2 className='text-center text-white my-3'>Recibe información en tu personaje favorito</h2>
           <form>
              <div className="mb-3">
                 <input type="Email" className="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre" />
@@ -14,7 +14,7 @@ const Section = () => {
                 <input type="Email" className="form-control" id="exampleInputPassword1" placeholder="Correo electrónico"/>
              </div>
              <div className="text-center">
-                <button type="submit" class="btn btn-light">Enviar</button>
+                <button type="submit" className="btn btn-light">Enviar</button>
              </div>
             </form>   
          </div>

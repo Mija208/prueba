@@ -18,13 +18,13 @@ function App() {
 const getUsers = async()=>{
   const response = await fetch(urlApi);
   const data = await response.json();
-  setUsuarios(data);
+  setUsuarios(data.results);
   
 }
 
   return (
     <div className='container'>
-   <h1 className="text-center">Las Amarillas</h1>
+   <h1 className="text-center">RICK AND MORTY</h1>
       {/* <Formulario usuarios={usuarios} setUsuarios={setUsuarios}/> */}
       <hr />
       <Buscador buscador={buscador} setBuscador={setBuscador}/>

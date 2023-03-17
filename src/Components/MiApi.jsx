@@ -11,7 +11,7 @@ let results = []
   }else{
     results = usuarios.filter((user) =>
     user.name.toLowerCase().includes(buscador.toLowerCase()) ||
-    user.phone.toLowerCase().includes(buscador.toLowerCase())
+    user.species.toLowerCase().includes(buscador.toLowerCase())
     );
   }
 
@@ -31,7 +31,7 @@ return (
         <h2>Busqueda de Usuarios</h2>
         <input className='form control w-50' type="text" placeholder='buscar...' value={palabra} onChange={(e) => setPalabra(e.target.value)} />
       </div> */}
-      <h2 className="mb-4">Directorio</h2>
+      <h2 className="mb-4">Personajes</h2>
       <select className="form-select form-select-lg mb-4" aria-label="Default select example" value={"default"} onChange={e=>setOrdenar(e.target.value)}>
         <option value="default">-- Ordenar por --</option>
         <option value="mayor">Número 9 - 0</option>
@@ -42,7 +42,7 @@ return (
         <thead className="bg-dark text-white">
           <tr>
             <th>Nombre</th>
-            <th>Teléfono</th>
+            <th>Especie</th>
           </tr>
         </thead>
         <tbody>

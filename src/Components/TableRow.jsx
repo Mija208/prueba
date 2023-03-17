@@ -1,11 +1,11 @@
 import React from 'react';
 
 const TableRow = ({user}) => {
-const {name, phone} = user
+const {name, species} = user
   return (
     <tr>
       <td>{name}</td>
-      <td>{phone}</td>
+      <td>{species}</td>
     </tr>
 
   );
