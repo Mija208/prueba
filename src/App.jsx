@@ -3,8 +3,8 @@ import "./App.css";
 import Buscador from "./Components/Buscador";
 // import Formulario from "./Components/Formulario";
 import MiApi from "./Components/MiApi";
-import { colaboradores } from "./db";
-const Api = "https://jsonplaceholder.typicode.com/users";
+// import { colaboradores } from "./db";
+const urlApi = "https://rickandmortyapi.com/api/character";
 
 
 
@@ -16,19 +16,21 @@ function App() {
   }, []);
 
 const getUsers = async()=>{
-  const response = await fetch(Api);
+  const response = await fetch(urlApi);
   const data = await response.json();
   setUsuarios(data);
+  
 }
 
   return (
     <div className='container'>
-   <h1 className="text-center">Base de datos</h1>
+   <h1 className="text-center">Las Amarillas</h1>
       {/* <Formulario usuarios={usuarios} setUsuarios={setUsuarios}/> */}
       <hr />
       <Buscador buscador={buscador} setBuscador={setBuscador}/>
       <MiApi usuarios={usuarios} buscador={buscador} />
-       
+      
+      
     </div>
   )
 }

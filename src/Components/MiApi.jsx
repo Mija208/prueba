@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Footer from './Footer'
+import Section from './Section'
 import TableRow from './TableRow' 
 
 const MiApi = ({usuarios, buscador}) => {
@@ -22,22 +24,22 @@ let results = []
 
  ordenar == 'menor' && ordenMenor (usuarios)
  ordenar == 'mayor' && ordenMayor (usuarios)
- 
+
 return (
     <div>
       {/* <div>
         <h2>Busqueda de Usuarios</h2>
         <input className='form control w-50' type="text" placeholder='buscar...' value={palabra} onChange={(e) => setPalabra(e.target.value)} />
       </div> */}
-      <h2 className="mb-4">Lista de Usuarios</h2>
-      <select className="form-select" aria-label="Default select example" value={"default"} onChange={e=>setOrdenar(e.target.value)}>
+      <h2 className="mb-4">Directorio</h2>
+      <select className="form-select form-select-lg mb-4" aria-label="Default select example" value={"default"} onChange={e=>setOrdenar(e.target.value)}>
         <option value="default">-- Ordenar por --</option>
         <option value="mayor">Número 9 - 0</option>
         <option value="menor">Número 0 - 9</option>
       </select>
 
       <table className="table table-striped table-hover mt-shadow-lg">
-        <thead className="bg-secondary text-white">
+        <thead className="bg-dark text-white">
           <tr>
             <th>Nombre</th>
             <th>Teléfono</th>
@@ -53,6 +55,8 @@ return (
           )}
         </tbody>
       </table>
+      <Section/>
+      <Footer/>
     </div>
   );
           }        

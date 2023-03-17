@@ -1,12 +1,21 @@
 .container{
-    color: whitesmoke;
-    background-color: rgb(1, 1, 32);
+    color: black;
+    background-color:yellow;
     
 }
 .table{
     
-    background-color: rgb(217, 246, 0);
+    background-color: rgba(229, 229, 91, 0.991)
 }
 
+.footer{
+    text-align: center;
     
+    
+    
+    
+  } 
 
+  .bg-green{
+    background-color: #28A745;
+}
